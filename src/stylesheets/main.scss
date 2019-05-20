@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+  clear: both;
+  margin-bottom: 50px;
+  text-align: center;
+  
+  img {
+    width: 40px;
+    padding-right: 5px;
+  }
+  
+  span {
+    vertical-align: middle;
+  }
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-space {
+  justify-content: space-evenly;
+}
+
+.block {
+  width: 500px;
+}
+
+h1 {
+  text-align: center;
+}

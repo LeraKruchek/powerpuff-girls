@@ -1,12 +1,12 @@
-import { all, fork } from 'redux-saga/effects';
+import { takeLatest } from "redux-saga";
+import { fork } from "redux-saga/effects";
+import { showSagas, usersAddEdit, usersDelete } from "./shows";
 
-import app from './app';
-import github from './github';
-import user from './user';
-
-/**
- * rootSaga
- */
-export default function* root() {
-  yield all([fork(app), fork(github), fork(user)]);
+// main saga generators
+export function* sagas() {
+  yield [
+    fork(showSagas),
+    fork(takeLatest, 'USERS_ADD_EDIT', usersAddEdit),
+    fork(takeLatest, 'USERS_DELETE', usersDelete),
+  ];
 }

@@ -1,9 +1,10 @@
-import app from './app';
-import github from './github';
-import user from './user';
+import { combineReducers } from "redux";
+import { routerReducer } from "react-router-redux";
+import { reducer as formReducer } from "redux-form";
+import show from "./show";
 
-export default {
-  ...app,
-  ...github,
-  ...user,
-};
+// main reducers
+export const reducers = combineReducers({
+  routing: routerReducer,
+  show: show,
+});
