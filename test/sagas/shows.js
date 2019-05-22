@@ -3,7 +3,7 @@ import assert from "assert";
 import { fetchShow } from "../../src/sagas/shows";
 import api from "../../src/core/api";
 
-// unit tests for the users saga
+
 describe('Users saga', () => {
   describe('fetchShow()', () => {
     const generator = fetchShow();

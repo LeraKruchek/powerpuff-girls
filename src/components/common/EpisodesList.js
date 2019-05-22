@@ -25,7 +25,7 @@ export default class EpisodesList extends React.Component {
   render() {
     return (
       <div className="episodes-container">
-        <table className="table">
+        <table className="table table-sm">
           <thead>
           <tr>
             <th scope="col">Season</th>
@@ -41,7 +41,7 @@ export default class EpisodesList extends React.Component {
         }
           </tbody>
         </table>
-        <button onClick={this.loadMore}>Load more</button>
+        <button className="btn btn-primary" onClick={this.loadMore}>Load more</button>
       </div>
     );
   }

@@ -5,7 +5,6 @@ export class App extends React.Component {
 
   // render
   render() {
-    // show the loading state while we wait for the app to load
     const {children} = this.props;
 
     // render

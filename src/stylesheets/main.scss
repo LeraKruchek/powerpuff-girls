@@ -9,18 +9,22 @@ html, body {
 }
 
 .content {
+  @media (max-width: 790px) {
+    margin: 0;
+  }
   margin: 0 200px;
   flex: 1 0 auto;
   
   .content-header {
     background-color: #f5e8e882;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding: 5px;
     text-align: center;
   }
 }
 .footer {
   height: 50px;
+  margin-top: 20px;
   padding: 10px;
   flex-shrink: 0;
   text-align: center;
@@ -41,20 +45,18 @@ html, body {
   display: flex;
 }
 
-.flex-column {
-  flex-direction: column;
-}
-
-.flex-space {
-  justify-content: space-between;
-}
-
 .block {
-  width: 500px;
+  margin-left: 10px;
 }
 
 .episodes-container {
   margin-top: 50px;
+}
+
+.container {
+  @media (max-width: 790px) {
+    flex-direction: column;
+  }
 }
 
 .heading {

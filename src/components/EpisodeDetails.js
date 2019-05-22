@@ -40,8 +40,8 @@ class EpisodeDetails extends React.Component {
           episode ?
           <Fragment>
             <h1 className="content-header">{episode.name}</h1>
-            <div className="flex flex-column">
-              <div className="flex flex-space">
+            <div className="container flex flex-column">
+              <div className="container flex">
                 <img src={episode.image.medium}/>
                 <div className="block" dangerouslySetInnerHTML={{
                   __html: episode.summary,

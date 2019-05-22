@@ -4,7 +4,6 @@ import { history } from "./store.js";
 import App from "./components/App";
 import Home from "./components/Home";
 import EpisodeDetails from "./components/EpisodeDetails";
-import NotFound from "./components/NotFound";
 
 // build the router
 const router = (

@@ -1,6 +1,6 @@
 import { ACTIONS } from '../actions/shows';
 
-// users reducer
+// show reducer
 export default function show(state = null, action) {
   switch (action.type) {
     case ACTIONS.SAVE_SHOW:

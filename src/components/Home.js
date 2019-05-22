@@ -23,7 +23,7 @@ export class Home extends React.Component {
           <div>
             <h1 className="content-header">{show.name}</h1>
             <div className="flex flex-column">
-              <div className="flex flex-space">
+              <div className="container flex">
                 <img src={show.image.medium}/>
                 <div className="block" dangerouslySetInnerHTML={{
                   __html: show.summary,
