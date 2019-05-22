@@ -4,7 +4,7 @@ import { fetchShow } from '../actions/shows';
 import EpisodesList from './common/EpisodesList';
 
 // Home page component
-class Home extends React.Component {
+export class Home extends React.Component {
   constructor(props) {
     super(props);
   }
