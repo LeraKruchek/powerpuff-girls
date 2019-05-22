@@ -1,29 +1,17 @@
-// API Users static class
+import { SHOW_ID } from './constants';
+
+const API_URL = 'http://api.tvmaze.com';
+
+// API helper
 const api = {
-  // get a list of users
   getShow: () => {
-    return fetch('http://api.tvmaze.com/shows/6771?embed=episodes')
+    return fetch(`${API_URL}/shows/${SHOW_ID}?embed=episodes`)
       .then(data => data.json());
   },
-
-  // add/edit a user
-  addEdit: () => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        // do something here
-        resolve();
-      }, 1000);
-    });
-  },
-
-  // delete a user
-  delete: () => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        // do something here
-        resolve();
-      }, 500);
-    });
+  
+  getEpisodeDetails: (season, number) => {
+    return fetch(`${API_URL}/shows/${SHOW_ID}/episodebynumber?season=${season}&number=${number}`)
+      .then(data => data.json());
   }
 };
 

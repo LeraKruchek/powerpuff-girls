@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from 'react';
 import "../stylesheets/main.scss";
 // App component
 export class App extends React.Component {
@@ -10,7 +10,7 @@ export class App extends React.Component {
 
     // render
     return (
-      <div >
+      <Fragment>
         <div className="content">
           {children}
         </div>
@@ -20,7 +20,7 @@ export class App extends React.Component {
             The Powerpuff Girls website
           </span>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { fetchShow } from '../actions/shows';
-import EpisodeDetails from './EpisodeDetails';
+import EpisodesList from './common/EpisodesList';
 
 // Home page component
 class Home extends React.Component {
@@ -21,7 +21,7 @@ class Home extends React.Component {
         {
           show ?
           <div>
-            <h1>{show.name}</h1>
+            <h1 className="content-header">{show.name}</h1>
             <div className="flex flex-column">
               <div className="flex flex-space">
                 <img src={show.image.medium}/>
@@ -31,7 +31,7 @@ class Home extends React.Component {
               </div>
               
               <div className="episodes">
-                <EpisodeDetails episodes={show._embedded.episodes}/>
+                <EpisodesList episodes={show._embedded.episodes}/>
               </div>
             </div>
           </div> :

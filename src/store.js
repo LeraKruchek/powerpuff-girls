@@ -26,8 +26,8 @@ if (process.env.NODE_ENV !== 'production') {
 let middleware = applyMiddleware(...middlewares);
 
 // add the redux dev tools
-if (process.env.NODE_ENV !== 'production' && window.devToolsExtension) {
-  middleware = compose(middleware, window.devToolsExtension());
+if (process.env.NODE_ENV !== 'production' && window.__REDUX_DEVTOOLS_EXTENSION__) {
+  middleware = compose(middleware, window.__REDUX_DEVTOOLS_EXTENSION__());
 }
 
 // create the store

@@ -5,11 +5,11 @@ const EpisodeComponent = (props) => {
   const { episode } = props;
 
   return (
-    <div className="episode">
-      <p>{episode.season}</p>
-      <p>{episode.number}</p>
-      <Link to={`/episodes/${episode.id}`}>{episode.name}</Link>
-    </div>
+    <tr className="episode">
+      <td>{episode.season}</td>
+      <td>{episode.number}</td>
+      <td><Link to={{ pathname: '/episode-details', search: `?season=${episode.season}&number=${episode.number}` }}>{episode.name}</Link></td>
+    </tr>
   )
 };
 
