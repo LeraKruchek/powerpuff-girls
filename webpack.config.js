@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        include: path.resolve(__dirname, app_root)
+        include: path.resolve(__dirname, app_root),
       },
       {
         // https://github.com/jtangelder/sass-loader
@@ -38,13 +38,13 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['style', 'css'],
-      }
+      },
     ],
   },
   devServer: {
     contentBase: __dirname + '/public',
     watchContentBase: true,
-    hot: true
+    hot: true,
   },
   plugins: [
     new CleanWebpackPlugin(['main.css', 'bundle.js'], {
@@ -52,6 +52,6 @@ module.exports = {
       verbose: true,
       dry: false, // true for simulation
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };

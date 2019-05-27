@@ -11,7 +11,7 @@ export default function episodes(state = null, action) {
         ...state,
         [id]: action.payload,
       };
-    
+
     // initial state
     default:
       return state;

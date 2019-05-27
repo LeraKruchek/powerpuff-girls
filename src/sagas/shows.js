@@ -1,5 +1,5 @@
 import { call, fork, put, takeLatest } from 'redux-saga/effects';
-import api from "../core/api";
+import api from '../core/api';
 import { ACTIONS, saveShow } from '../actions/shows';
 
 // fetch the show
@@ -10,7 +10,5 @@ export function* fetchShow(action) {
 }
 
 export function* showSagas() {
-  yield [
-    fork(takeLatest, ACTIONS.FETCH_SHOW, fetchShow)
-  ];
+  yield [fork(takeLatest, ACTIONS.FETCH_SHOW, fetchShow)];
 }
