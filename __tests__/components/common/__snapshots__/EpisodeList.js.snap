@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EpisodeList component render() should render the component 1`] = `
+<div
+  className="episodes-container"
+>
+  <table
+    className="table table-sm"
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Season
+        </th>
+        <th
+          scope="col"
+        >
+          Episode №
+        </th>
+        <th
+          scope="col"
+        >
+          Episode name
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Load more
+  </button>
+</div>
+`;

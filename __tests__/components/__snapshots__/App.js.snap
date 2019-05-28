@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component render() should render the component 1`] = `
+<Fragment>
+  <div
+    className="content"
+  />
+  <div
+    className="footer"
+  >
+    <img
+      src="//static.tvmaze.com/images/tvm-header-logo.png"
+    />
+    <span>
+      The Powerpuff Girls website
+    </span>
+  </div>
+</Fragment>
+`;

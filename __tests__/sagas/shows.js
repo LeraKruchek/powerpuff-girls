@@ -1,5 +1,4 @@
 import { call, put } from 'redux-saga/effects';
-import assert from 'assert';
 import { fetchShow } from '../../src/sagas/shows';
 import api from '../../src/core/api';
 
@@ -8,15 +7,15 @@ describe('Users saga', () => {
     const generator = fetchShow();
 
     it('should return the api.getShow call', () => {
-      assert.deepEqual(generator.next().value, call(api.getShow));
+      expect(generator.next().value).toEqual(call(api.getShow));
     });
 
     it('should return the SAVE_SHOW action', () => {
-      assert.deepEqual(generator.next().value, put({ type: 'SAVE_SHOW' }));
+      expect(generator.next().value).toEqual(put({ type: 'SAVE_SHOW' }));
     });
 
     it('should be finished', () => {
-      assert.equal(generator.next().done, true);
+      expect(generator.next().done).toBe(true);
     });
   });
 });
